@@ -21,6 +21,7 @@ def get_rid_from_kid(ko_id):
         res = KOID(kid=k_id, rid_list=r_id_list)
         return res
     else:
+        print("{} has No reaction data!".format(ko_id))
         return False
 
 

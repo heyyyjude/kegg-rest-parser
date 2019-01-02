@@ -1,0 +1,5 @@
+KOID,RID,RID-Equation,RID-Definition,CID
+K00163,R00014,C00022 + C00068 <=> C05125 + C00011,Pyruvate + Thiamin diphosphate <=> 2-(alpha-Hydroxyethyl)thiamine diphosphate + CO2,C00022:C00068:C05125:C00011
+K00163,R00209,C00022 + C00010 + C00003 <=> C00024 + C00011 + C00004 + C00080,Pyruvate + CoA + NAD+ <=> Acetyl-CoA + CO2 + NADH + H+,C00022:C00010:C00003:C00024:C00011:C00004:C00080
+K00163,R01699,C00022 + C15972 <=> C16255 + C00011,Pyruvate + Enzyme N6-(lipoyl)lysine <=> [Dihydrolipoyllysine-residue acetyltransferase] S-acetyldihydrolipoyllysine + CO2,C00022:C15972:C16255:C00011
+K00163,R03270,C05125 + C15972 <=> C16255 + C00068,2-(alpha-Hydroxyethyl)thiamine diphosphate + Enzyme N6-(lipoyl)lysine <=> [Dihydrolipoyllysine-residue acetyltransferase] S-acetyldihydrolipoyllysine + Thiamin diphosphate,C05125:C15972:C16255:C00068
