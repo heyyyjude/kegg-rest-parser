@@ -37,22 +37,30 @@ def fetch_item_from_kegg(ko_id, path):
                 fout.write(outline)
 
 
-if __name__ == '__main__':
-    output_dir_path = 'nafld-pval-0.01'
-    picrust_output = r'C:\Users\DGL8\Desktop\nafld\nalfd-picrust.pval-0.01.tsv'
-    gtest = 'C:/Users/DGL8/Desktop/nafld/gtest_fdr_0.05.csv'
-    picrust_path = output_dir_path + "/" + 'merge.output.csv'
+def test(ko_id):
+    fetch_item_from_kegg(ko_id, ko_id)
 
-    ko_id_list = parse_picrust_output(picrust_output)
-    for ko_id in ko_id_list:
-        fetch_item_from_kegg(ko_id, output_dir_path)
-    csv_list = [i for i in glob.glob(os.path.join(output_dir_path, "*.csv"))]
-    for csv in csv_list:
-        run_conver_rgan_abbr_to_full_name(csv)
-    merge_picrust_output(output_dir_path)
-    genus, species, picrust_dict = find_overlaps(gtest, picrust_path)
-    genus_dict, species_dict = compare_otutable_picrust(genus, species, picrust_dict)
-    print(genus_dict)
-    print(species_dict)
+
+if __name__ == '__main__':
+    ko_id = ['K00161', 'K00162', 'K00163', 'K00627', 'K00382']
+
+    for i in ko_id:
+        test(i)
+    # output_dir_path = 'nafld-pval-0.01'
+    # picrust_output = r'C:\Users\DGL8\Desktop\nafld\nalfd-picrust.pval-0.01.tsv'
+    # gtest = 'C:/Users/DGL8/Desktop/nafld/gtest_fdr_0.05.csv'
+    # picrust_path = output_dir_path + "/" + 'merge.output.csv'
+    #
+    # ko_id_list = parse_picrust_output(picrust_output)
+    # for ko_id in ko_id_list:
+    #     fetch_item_from_kegg(ko_id, output_dir_path)
+    # csv_list = [i for i in glob.glob(os.path.join(output_dir_path, "*.csv"))]
+    # for csv in csv_list:
+    #     run_conver_rgan_abbr_to_full_name(csv)
+    # merge_picrust_output(output_dir_path)
+    # genus, species, picrust_dict = find_overlaps(gtest, picrust_path)
+    # genus_dict, species_dict = compare_otutable_picrust(genus, species, picrust_dict)
+    # print(genus_dict)
+    # print(species_dict)
     # if you want to get organism info
     # http://rest.kegg.jp/get/gn:T04853
