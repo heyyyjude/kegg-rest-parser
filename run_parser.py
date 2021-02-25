@@ -37,15 +37,15 @@ def fetch_item_from_kegg(ko_id, path):
                 fout.write(outline)
 
 
-def test(ko_id):
+def main(ko_id):
     fetch_item_from_kegg(ko_id, ko_id)
 
 
 if __name__ == '__main__':
-    ko_id = ['K00161', 'K00162', 'K00163', 'K00627', 'K00382']
+    ko_id_list = ['K00161', 'K00162', 'K00163', 'K00627', 'K00382']
 
-    for i in ko_id:
-        test(i)
+    for i in ko_id_list:
+        main(i)
     # output_dir_path = 'nafld-pval-0.01'
     # picrust_output = r'C:\Users\DGL8\Desktop\nafld\nalfd-picrust.pval-0.01.tsv'
     # gtest = 'C:/Users/DGL8/Desktop/nafld/gtest_fdr_0.05.csv'
